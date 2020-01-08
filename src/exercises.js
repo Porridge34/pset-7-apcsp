@@ -27,7 +27,17 @@ function endsMeet(values, n) {
 }
 
 function difference(numbers) {
-
+  if(numbers === undefined || numbers === null || numbers.isNaN()){
+    return undefined;
+  }else{
+    let max = null;
+    let min = null
+    var x;
+    for (x in numbers){
+      max = numbers[x];
+      min = numbers[x];
+    }
+  }
 }
 
 function max(number) {
