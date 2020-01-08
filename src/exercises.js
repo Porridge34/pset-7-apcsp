@@ -9,7 +9,21 @@ function commonEnd(a, b) {
 }
 
 function endsMeet(values, n) {
-
+  if (values === undefined || values === null || values.length < n){
+    return [];
+  }else{
+    let newArray = [];
+    for (let i = 0; i <n; i++){
+      if (values[i] !== undefined){
+        newArray.push(values[i]);
+      }
+    }for (let i = n; i > 0; i--){
+      if (values[values.length-i] !== undefined){
+        newArray.push(values[values.length-i]);
+      }
+    }
+    return newArray;
+  }
 }
 
 function difference(numbers) {
