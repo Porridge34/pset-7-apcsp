@@ -1,46 +1,48 @@
 function commonEnd(a, b) {
   if (!a || a.length === 0 || !b || b.length === 0) {
     return false;
+  }else if (a[0]===b[0] || a[a.length - 1] === b[b.length - 1]){
+    return true;
+  }else{
+    return false;
   }
-
-  // write your code here
 }
 
 function endsMeet(values, n) {
-  // write your code here
+
 }
 
 function difference(numbers) {
-  // write your code here
+
 }
 
 function max(number) {
-  // write your code here
+
 }
 
 function middle(values) {
-  // write your code here
+
 }
 
 function increasing(numbers) {
-  // write your code here
+
 }
 
 function everywhere(values, x) {
-  // write your code here
+
 }
 
 function consecutive(numbers) {
-  // write your code here
+
 }
 
 function balance(numbers) {
-  // write your code here
+
   console.log("test");
 }
 
 function clumps(values) {
-  // write your code here
+
 }
 
 /*
