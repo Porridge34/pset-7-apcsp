@@ -27,15 +27,21 @@ function endsMeet(values, n) {
 }
 
 function difference(numbers) {
-  if(numbers === undefined || numbers === null || numbers.isNaN()){
+  if(numbers === undefined || numbers === null || numbers.length <= 1){
     return undefined;
   }else{
-    let max = null;
-    let min = null
-    var x;
-    for (x in numbers){
-      max = numbers[x];
-      min = numbers[x];
+    let isArrayNaN = 0;
+    let max = numbers[0];
+    let min = numbers[0];
+    for (let x = 0; x < numbers.length; x++){
+      (Number.isNaN(numbers[x]))? isArrayNaN = null : x;
+      (numbers[x]>max)?max = numbers[x]:max;
+      (numbers[x]<min)?min = numbers[x]:min;
+    }
+    if(isArrayNaN===null){
+      return undefined;
+    }else{
+      return max-min;
     }
   }
 }
