@@ -85,7 +85,16 @@ function increasing(numbers) {
 }
 
 function everywhere(values, x) {
-
+  if(!values || !x || values.length < 1 || values.lastIndexOf(x)===-1){
+    return false;
+  }else{
+    let isTrue = true;
+    console.log(values.lastIndexOf(x));
+    for (let y = values.lastIndexOf(x); y < values.length; y+=2){
+      (values[y]!==x)? isTrue = false : isTrue;
+    }
+    return isTrue;
+  }
 }
 
 function consecutive(numbers) {
