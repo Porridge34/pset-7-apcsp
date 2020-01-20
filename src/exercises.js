@@ -140,15 +140,17 @@ function balance(numbers) {
 }
 
 function clumps(values) {
-  if (!values || !isDefined(values)){
+  if (!values){
     return -1;
   }else{
     let clumpCount = 0;
     let storeClump = null;
     for (x = values.length-1; x >=0; x--){
-      if(values[x]===values[x-1] && values[x-1]!=storeClump){
+      if(values[x]===values[x-1] && values[x]!==storeClump){
         clumpCount++;
         storeClump = values[x];
+      }else if(storeClump !== values[x]){
+        storeClump = null;
       }
     }
     return clumpCount;
